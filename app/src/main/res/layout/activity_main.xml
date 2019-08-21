@@ -5,8 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
     tools:context=".activities.MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/img_logo" />
 
+    <GridView
+        android:id="@+id/gridViewAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:columnWidth="40dp"
+        android:horizontalSpacing="4dp"
+        android:numColumns="auto_fit"
+        android:padding="4dp"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="4dp" />
+
+    <GridView
+        android:id="@+id/gridViewSuggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:columnWidth="40dp"
+        android:horizontalSpacing="4dp"
+        android:numColumns="auto_fit"
+        android:padding="4dp"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="4dp" />
 
 </LinearLayout>
