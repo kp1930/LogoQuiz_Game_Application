@@ -2,5 +2,6 @@
 
     <string name="app_name">Logo Quiz</string>
     <string name="img_logo">TODO</string>
+    <string name="submit">Submit</string>
 
 </resources>

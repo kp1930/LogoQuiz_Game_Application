@@ -1,43 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_gravity="center_horizontal"
     tools:context=".activities.MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:contentDescription="@string/img_logo" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSubmit"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-    <GridView
-        android:id="@+id/gridViewAnswer"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/img_logo" />
+
+        <GridView
+            android:id="@+id/gridViewAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:columnWidth="40dp"
+            android:horizontalSpacing="4dp"
+            android:numColumns="auto_fit"
+            android:padding="4dp"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="4dp" />
+
+        <GridView
+            android:id="@+id/gridViewSuggest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:columnWidth="40dp"
+            android:horizontalSpacing="4dp"
+            android:numColumns="auto_fit"
+            android:padding="4dp"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="4dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:columnWidth="40dp"
-        android:horizontalSpacing="4dp"
-        android:numColumns="auto_fit"
-        android:padding="4dp"
-        android:scrollbars="none"
-        android:stretchMode="columnWidth"
-        android:verticalSpacing="4dp" />
+        android:layout_alignParentBottom="true"
+        android:text="@string/submit" />
 
-    <GridView
-        android:id="@+id/gridViewSuggest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:columnWidth="40dp"
-        android:horizontalSpacing="4dp"
-        android:numColumns="auto_fit"
-        android:padding="4dp"
-        android:scrollbars="none"
-        android:stretchMode="columnWidth"
-        android:verticalSpacing="4dp" />
-
-</LinearLayout>
+</RelativeLayout>
